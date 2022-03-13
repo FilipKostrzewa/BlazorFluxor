@@ -10,6 +10,7 @@ namespace BlazorFluxor.Client.Pages.Counter
         {
             return new CounterState
             {
+                Name = "Counter",
                 Count1 = 0,
                 Count2 = 0,
                 Count3 = 0,

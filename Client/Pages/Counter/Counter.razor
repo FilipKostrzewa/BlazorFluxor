@@ -11,24 +11,25 @@
 
 <input 
     value="@_state.Value.Name" 
-    @oninput="(e) => { _dispatcher.Dispatch(new SetName(e.Value?.ToString()));}"/>
+    @oninput="(e) => _dispatcher.Dispatch(new SetName(e.Value?.ToString()))"/>
+
 <button class="btn btn-primary" @onclick="() => {_dispatcher.Dispatch(new ClearName());}">Clear</button>
 <br />
 <br />
 
-<button class="btn btn-primary" @onclick="() => {_dispatcher.Dispatch(new DecrementCounter(1));}">-</button>
-<button class="btn btn-primary" @onclick="() => {_dispatcher.Dispatch(new ResetCounter(1));}">Reset</button>
-<button class="btn btn-primary" @onclick="() => {_dispatcher.Dispatch(new IncrementCounter(1));}">+</button>
+<button class="btn btn-primary" @onclick="() => _dispatcher.Dispatch(new DecrementCounter(1))">-</button>
+<button class="btn btn-primary" @onclick="() => _dispatcher.Dispatch(new ResetCounter(1))">Reset</button>
+<button class="btn btn-primary" @onclick="() => _dispatcher.Dispatch(new IncrementCounter(1))">+</button>
 <h1>First counter: <b>@_state.Value.Count1</b></h1>
 
-<button class="btn btn-primary" @onclick="() => {_dispatcher.Dispatch(new DecrementCounter(2));}">-</button>
-<button class="btn btn-primary" @onclick="() => {_dispatcher.Dispatch(new ResetCounter(2));}">Reset</button>
-<button class="btn btn-primary" @onclick="() => {_dispatcher.Dispatch(new IncrementCounter(2));}">+</button>
+<button class="btn btn-primary" @onclick="() => _dispatcher.Dispatch(new DecrementCounter(2))">-</button>
+<button class="btn btn-primary" @onclick="() => _dispatcher.Dispatch(new ResetCounter(2))">Reset</button>
+<button class="btn btn-primary" @onclick="() => _dispatcher.Dispatch(new IncrementCounter(2))">+</button>
 <h1>Second counter: <b>@_state.Value.Count2</b></h1>
 
-<button class="btn btn-primary" @onclick="() => {_dispatcher.Dispatch(new DecrementCounter(3));}">-</button>
-<button class="btn btn-primary" @onclick="() => {_dispatcher.Dispatch(new ResetCounter(3));}">Reset</button>
-<button class="btn btn-primary" @onclick="() => {_dispatcher.Dispatch(new IncrementCounter(3));}">+</button>
+<button class="btn btn-primary" @onclick="() => _dispatcher.Dispatch(new DecrementCounter(3))">-</button>
+<button class="btn btn-primary" @onclick="() => _dispatcher.Dispatch(new ResetCounter(3))">Reset</button>
+<button class="btn btn-primary" @onclick="() => _dispatcher.Dispatch(new IncrementCounter(3))">+</button>
 <h1>Third counter: <b>@_state.Value.Count3</b></h1>
 
 
